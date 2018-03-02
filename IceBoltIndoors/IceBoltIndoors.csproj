@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D53D19D6-CE2D-B3C4-B921-7754946FA28E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2017.3.1f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_3_1;UNITY_2017_3;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_3_1;UNITY_2017_3;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEditor">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WebModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Timeline">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIAutomation">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GoogleAudioSpatializer">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Oshmirto">
+      <HintPath>Assets/Scripts/CinemachineTimelineCode/Cinematography/Oshmirto.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>C:/Users/drwiner/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>C:/Users/drwiner/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Users/drwiner/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>C:/Users/drwiner/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/drwiner/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>C:/Users/drwiner/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>C:/Users/drwiner/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="IceBoltIndoors.Plugins.csproj">
+      <Project>{DC1567D6-4F32-6475-E8A7-616B58DEE354}</Project>
+      <Name>IceBoltIndoors.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineCollider.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineConfiner.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineDollyCart.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineExternalCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFollowZoom.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFreeLook.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineMixingCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachinePath.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachinePipeline.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineSmoother.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineSmoothPath.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineStateDrivenCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineTargetGroup.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineVirtualCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineComposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineFramingTransposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineGroupComposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineHardLockToTarget.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineHardLookAt.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineOrbitalTransposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachinePOV.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineSameAsFollowObject.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineTrackedDolly.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineTransposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\AxisState.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CameraState.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineBlend.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineBlenderSettings.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineComponentBase.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineCore.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineDebugLogger.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineExtension.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachinePathBase.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachinePropertyAttribute.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineVirtualCameraBase.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\GaussianFilter.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\ICinemachineCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\ICinemachineComponent.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\LensSettings.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\NoiseSettings.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\Predictor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\ReflectionHelpers.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\SplineHelpers.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\UnityVectorExtensions.cs" />
+    <Compile Include="Assets\Cinemachine\PostFX\CinemachinePostFX.cs" />
+    <Compile Include="Assets\Cinemachine\PostFX\CinemachinePostProcessing.cs" />
+    <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
+    <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
+    <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Assets\DefaultPlayables\LightControl\LightControlBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\LightControl\LightControlClip.cs" />
+    <Compile Include="Assets\DefaultPlayables\LightControl\LightControlMixerBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\LightControl\LightControlTrack.cs" />
+    <Compile Include="Assets\DefaultPlayables\NavMeshAgentControl\NavMeshAgentControlBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\NavMeshAgentControl\NavMeshAgentControlClip.cs" />
+    <Compile Include="Assets\DefaultPlayables\NavMeshAgentControl\NavMeshAgentControlMixerBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\NavMeshAgentControl\NavMeshAgentControlTrack.cs" />
+    <Compile Include="Assets\DefaultPlayables\ScreenFader\ScreenFaderBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\ScreenFader\ScreenFaderClip.cs" />
+    <Compile Include="Assets\DefaultPlayables\ScreenFader\ScreenFaderMixerBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\ScreenFader\ScreenFaderTrack.cs" />
+    <Compile Include="Assets\DefaultPlayables\TextSwitcher\TextSwitcherBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\TextSwitcher\TextSwitcherClip.cs" />
+    <Compile Include="Assets\DefaultPlayables\TextSwitcher\TextSwitcherMixerBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\TextSwitcher\TextSwitcherTrack.cs" />
+    <Compile Include="Assets\DefaultPlayables\TimeDilation\TimeDilationBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\TimeDilation\TimeDilationClip.cs" />
+    <Compile Include="Assets\DefaultPlayables\TimeDilation\TimeDilationMixerBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\TimeDilation\TimeDilationTrack.cs" />
+    <Compile Include="Assets\DefaultPlayables\TransformTween\TransformTweenBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\TransformTween\TransformTweenClip.cs" />
+    <Compile Include="Assets\DefaultPlayables\TransformTween\TransformTweenMixerBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\TransformTween\TransformTweenTrack.cs" />
+    <Compile Include="Assets\DefaultPlayables\Video\VideoPlayableBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\Video\VideoSchedulerPlayableBehaviour.cs" />
+    <Compile Include="Assets\DefaultPlayables\Video\VideoScriptPlayableAsset.cs" />
+    <Compile Include="Assets\DefaultPlayables\Video\VideoScriptPlayableTrack.cs" />
+    <Compile Include="Assets\Scripts\BasicScriptsForScene\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\BasicScriptsForScene\SetMecanimParams.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Camera Behaviours\Perlin.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Camera Behaviours\ShakeCam.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Image Effects (Pro Only)_CS\Cinema Suite\CSDOFScatter.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Image Effects (Pro Only)_CS\Cinema Suite\CSPostEffectsBase.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\CameraBody.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\CameraBodyGUI.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\CameraMan.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\CameraMount.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\ProCamsLensDataTable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\ProCamsUtility.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\Stereo3D.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\Stereo3DGUI.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\Stereo3DRenderer.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\FireBoltCode\FramingParams.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_json\Clip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_json\DiscourseClip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_json\FabulaClip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\DiscourseClip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\DiscourseContainer.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\DiscourseReader.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\FabulaAction.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\FabulaClip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\FabulaContainer.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\FabulaReader.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\IceBolt.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\LerpMoveObject\LerpMoveObjectAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\LerpMoveObject\LerpMoveObjectAsset1.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\LerpMoveObject\LerpMoveObjectPlayable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\LerpMoveObject\LerpMoveObjectPlayable1.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\TeleportObject\TeleportObject.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\TeleportObject\TeleportObjectAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeTravel\SetFabulaTimeline.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeTravel\SetPositionTimeline.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeTravel\timeStorage.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\DisableAtStart.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\old\assign_anim_to_clip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\old\assign_cam_to_clip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\old\backup_code.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\PairwiseDistanceCalculator.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\PlayerCutsceneSpeedController.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\setFloat\setFloatBehaviour.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\setFloat\setFloatClip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\setFloat\setFloatData.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\SetSkyboxShaderValuesAtStart.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\SetTimeScaleAtStart.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\GameAINamespace.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Goal\Goal.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Goal\GoalSwitcher.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Goal\PathFind.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Goal\PathGoal.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Goal\SetGoalWithMouseClick.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\PriorityQueue\FastPriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\PriorityQueue\FastPriorityQueueNode.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\PriorityQueue\GenericPriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\PriorityQueue\GenericPriorityQueueNode.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\PriorityQueue\IFixedSizePriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\PriorityQueue\IPriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\PriorityQueue\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\PriorityQueue\SimplePriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\PriorityQueue\StablePriorityQueue.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\PriorityQueue\StablePriorityQueueNode.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\Behavior\DynoBehavior.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\Behavior\DynoBehavior_PathFollow.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\Behavior\KinematicBehavior.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\Behavior\UnityDynoBehavior.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\DynamicSteering\DynoAlign.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\DynamicSteering\DynoAlign_PathFollow.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\DynamicSteering\DynoArrive.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\DynamicSteering\DynoArrive_PathFollow.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\DynamicSteering\DynoSeek.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\DynamicSteering\DynoSeek_PathFollow.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\DynamicSteering\UnityDynoArrive.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\Kinematic.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\KinematicSteering\KinematicArrive.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\KinematicSteering\KinematicSeek.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\Structs\DynoSteering.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\Structs\KinematicSteering.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\Structs\KinematicSteeringOutput.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\Steering\Structs\SteeringParams.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\WorldRep\Edge.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\WorldRep\QuantizeLocalize.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\WorldRep\TileGraph.cs" />
+    <Compile Include="Assets\Scripts\unityai4games\WorldRep\TileNode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\DownloadedAssets\_3D Scifi Kit Starter Kit\_Docs\Doc.txt" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Image Effects (Pro Only)_CS\_Sources\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Image Effects (Pro Only)_CS\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Lens Data\Resources\CinemaSuite_LensData.txt" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Shader\Stereo3D.shader" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\tmp\Resources\ProjectFilmFormat.txt" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Oshmirto\readme.txt" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\discourse.xml" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\discourse2.xml" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\discourse_simplenav.xml" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\fabula.xml" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\fabula2.xml" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\fabula_simplenav.xml" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\xml_docs\anim_world.xml" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\xml_docs\anticipate_duel_discourse.xml" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\xml_docs\anticipate_duel_fabula.xml" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\xml_docs\block_world.xml" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\xml_docs\test_world.xml" />
+    <None Include="Assets\Scripts\unityai4games\PriorityQueue\readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
