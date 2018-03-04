@@ -256,6 +256,9 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
     <Reference Include="Oshmirto">
       <HintPath>Assets/Scripts/CinemachineTimelineCode/Cinematography/Oshmirto.dll</HintPath>
     </Reference>
@@ -279,9 +282,6 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/drwiner/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -372,8 +372,10 @@
     <Compile Include="Assets\DefaultPlayables\Video\VideoSchedulerPlayableBehaviour.cs" />
     <Compile Include="Assets\DefaultPlayables\Video\VideoScriptPlayableAsset.cs" />
     <Compile Include="Assets\DefaultPlayables\Video\VideoScriptPlayableTrack.cs" />
+    <Compile Include="Assets\laserScript.cs" />
     <Compile Include="Assets\Scripts\BasicScriptsForScene\PlayerController.cs" />
     <Compile Include="Assets\Scripts\BasicScriptsForScene\SetMecanimParams.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\CinemachineCameraBody.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Camera Behaviours\Perlin.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Camera Behaviours\ShakeCam.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Image Effects (Pro Only)_CS\Cinema Suite\CSDOFScatter.cs" />
@@ -387,10 +389,10 @@
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\Stereo3D.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\Stereo3DGUI.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\Cinema Pro Cams\Scripts\Stereo3DRenderer.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Cinematography\FireBoltCode\FramingParams.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_json\Clip.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_json\DiscourseClip.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_json\FabulaClip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\CinematographyAttributes.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\Clip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\DiscourseClip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\FabulaClip.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\DiscourseClip.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\DiscourseContainer.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\DiscourseReader.cs" />
@@ -399,15 +401,39 @@
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\FabulaContainer.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\FileIO_xml\FabulaReader.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\IceBolt.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\LerpMoveObject\LerpMoveObjectAsset.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\LerpMoveObject\LerpMoveObjectAsset1.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\LerpMoveObject\LerpMoveObjectPlayable.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\LerpMoveObject\LerpMoveObjectPlayable1.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\TeleportObject\TeleportObject.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\PlayableOperations\TeleportObject\TeleportObjectAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\10-Navmesh\SetAgentTargetAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\10-Navmesh\SetAgentTargetPlayable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\1-SimpleCustomTrackAndPlayable\SimpleCustomAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\1-SimpleCustomTrackAndPlayable\SimpleCustomPlayable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\1-SimpleCustomTrackAndPlayable\SimpleCustomTrack.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\4-Particles\ParticleAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\4-Particles\ParticlePlayable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\5-BulletTime\BulletTimeAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\5-BulletTime\BulletTimePlayable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\6-ToggleComponent\Rotate.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\6-ToggleComponent\ToggleComponentAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\6-ToggleComponent\ToggleComponentPlayable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\7-DestroyGameObject\DestroyObjectAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\7-DestroyGameObject\DestroyObjectPlayable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\8-EventSystemDemo\EventHandler.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\8-EventSystemDemo\EventSystemAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\8-EventSystemDemo\EventSystemPlayable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\9-TimelineControlsCanvas\TimelineControl.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\GoalSettingPlayable\GoalSettingPlayableBehaviour.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\GoalSettingPlayable\GoalSettingPlayableClip.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\GoalSettingPlayable\GoalSettingPlayableMixerBehaviour.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\GoalSettingPlayable\GoalSettingPlayableTrack.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\LerpMoveObject\LerpMoveObjectAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\LerpMoveObject\LerpMoveObjectAsset1.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\LerpMoveObject\LerpMoveObjectPlayable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\LerpMoveObject\LerpMoveObjectPlayable1.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\TeleportObject\TeleportObject.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\TeleportObject\TeleportObjectAsset.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeTravel\SetFabulaTimeline.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeTravel\SetPositionTimeline.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeTravel\timeStorage.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TrackAttributes.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TrackManager.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\DisableAtStart.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\old\assign_anim_to_clip.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\old\assign_cam_to_clip.cs" />
@@ -457,6 +483,7 @@
     <Compile Include="Assets\Scripts\unityai4games\WorldRep\QuantizeLocalize.cs" />
     <Compile Include="Assets\Scripts\unityai4games\WorldRep\TileGraph.cs" />
     <Compile Include="Assets\Scripts\unityai4games\WorldRep\TileNode.cs" />
+    <Compile Include="Assets\SpinFan.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

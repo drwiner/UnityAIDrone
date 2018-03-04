@@ -29,6 +29,8 @@ sysinfo.txt
 .consulo/
 /*.tmp
 /*.svd
+/*.info
+
  
 # ============ #
 # OS generated #
@@ -43,3 +45,4 @@ ehthumbs.db
 [Dd]esktop.ini
 Corridor/Library/ShaderCache/
 Corridor/Library/metadata/
+IceBoltIndoors/Library/metadata/

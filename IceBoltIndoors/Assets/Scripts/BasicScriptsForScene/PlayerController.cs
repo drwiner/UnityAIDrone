@@ -104,15 +104,45 @@ public class PlayerController : MonoBehaviour
 
     void MovementUpDown()
     {
-        if (Input.GetKey(KeyCode.K))
+        if (Mathf.Abs(moveVertical) > 0.2f || Mathf.Abs(moveHorizontal) > 0.2f)
+        {
+            if (!Input.GetKey(KeyCode.I) && !Input.GetKey(KeyCode.K) && !Input.GetKey(KeyCode.J) && !Input.GetKey(KeyCode.L))
+            {
+                rb.velocity = new Vector3(rb.velocity.x, Mathf.Lerp(rb.velocity.y, 0, Time.deltaTime * 5), rb.velocity.z);
+                upForce = 281f;
+            }
+            // if there's steering left or right (angular)
+            if (!Input.GetKey(KeyCode.I) && !Input.GetKey(KeyCode.K) && (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L)))
+            {
+                rb.velocity = new Vector3(rb.velocity.x, Mathf.Lerp(rb.velocity.y, 0, Time.deltaTime * 5), rb.velocity.z);
+                upForce = 110f;
+            }
+
+            if(Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L))
+            {
+                upForce = 410f;
+            }
+
+        }
+
+        if (Mathf.Abs(moveVertical) < 0.2f && Mathf.Abs(moveHorizontal) > 0.2f)
+        {
+            upForce = 135f;
+        }
+
+        if (Input.GetKey(KeyCode.I))
         {
             upForce = 450f;
+            if (Mathf.Abs(moveHorizontal) > 0.2f)
+            {
+                upForce = 500f;
+            }
         }
-        else if (Input.GetKey(KeyCode.I))
+        else if (Input.GetKey(KeyCode.K))
         {
             upForce = -200f;
         }
-        else if(!Input.GetKey(KeyCode.I) && !Input.GetKey(KeyCode.K))
+        else if(!Input.GetKey(KeyCode.I) && !Input.GetKey(KeyCode.K) && (Mathf.Abs(moveVertical) < 0.2f && Mathf.Abs(moveHorizontal) < 0.2f))
         {
             upForce = 98.1f;
         }
