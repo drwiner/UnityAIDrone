@@ -33,48 +33,56 @@ namespace SteeringNamespace
             SP = GetComponent<SteeringParams>();
         }
 
-        public void Arrive(Vector3 target)
+        public void SetPath(Stack<Vector3> _currentPath)
         {
-            
+            currentPath = _currentPath;
+            currentGoal = currentPath.Pop();
+        }
+
+        public float Seek(Vector3 target, bool arrive)
+        {
+            var direction = currentGoal - transform.position;
+            var distance = direction.magnitude;
+
+            if (distance < goalRadius)
+            {
+                return 0f;
+            }
+
+            if (distance > slowRadius || !arrive)
+            {
+                return 1f;
+            }
+
+            // distance is less than or equal to slow radius. 
+            return distance / slowRadius;
+        }
+
+        public float Align(Vector3 target)
+        {
+            return 0f;
         }
 
         void Update()
         {
+            float seekOutput;
             if (currentPath.Count == 0)
             {
                 if (!atRest)
                 {
-                    Arrive(currentTarget);
+                    seekOutput = Seek(currentTarget, true);
+                    if (seekOutput == 0f)
+                        atRest = true;
                 }
+            }
+            else
+            {
+                seekOutput = Seek(currentTarget, false);
+                if (seekOutput == 0f)
+                    currentTarget = currentPath.Pop();
             }
             
-
-
-            // if we are not at last point on path
-            if (currentPath.Count > 0)
-            {
-                // seek next point on path
-                ds_force = seek.getSteering(currentGoal);
-
-                // pop when seek says we've made it into range and seek the next target
-                if (seek.changeGoal)
-                {
-                    nextTile = currentPath.Pop();
-                    currentGoal = QuantizeLocalize.Localize(nextTile);
-                    if (currentPath.Count > 0)
-                        ds_force = seek.getSteering(currentGoal);
-                    else
-                        ds_force = arrive.getSteering(currentGoal);
-                }
-            }
-            // otherwise, we are approaching the path goal.  we should arrive.
-            else if (currentPath.Count == 0)
-            {
-                ds_force = arrive.getSteering(currentGoal);
-            }
-
-
-            ds_torque = align.getSteering(currentGoal);
+            
 
             //PC.SetInput(ds_force, ds_torque);
 
