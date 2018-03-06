@@ -30,17 +30,36 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private Animator thisMecanim;
 
+    public bool playerControlEnabled = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         thisMecanim = GetComponent<Animator>();
     }
 
+    public void SetInput(Vector3 force, float torque)
+    {
+        //moveHorizontal = torque;
+
+    }
+
+
     void FixedUpdate()
     {
-        moveHorizontal = Input.GetAxis("Horizontal");
-        moveVertical = Input.GetAxis("Vertical");
+        if (playerControlEnabled)
+        {
+            moveHorizontal = Input.GetAxis("Horizontal");
+            moveVertical = Input.GetAxis("Vertical");
+            // gives value between 0 and 1
+            ControlDrone();
+        }
+        // For Game AI: just replace these with force and torque
 
+    }
+
+    public void ControlDrone()
+    {
         MovementUpDown();
         MovementForward();
         MovementRotation();
@@ -54,7 +73,6 @@ public class PlayerController : MonoBehaviour
         rb.rotation = Quaternion.Euler(
                 new Vector3(tiltAmountForward, currentRotation, tiltAmountSideways)
             );
-
     }
 
     

@@ -483,6 +483,7 @@
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\setFloat\setFloatData.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\SetSkyboxShaderValuesAtStart.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\SetTimeScaleAtStart.cs" />
+    <Compile Include="Assets\Scripts\DroneAIController\DroneAIController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

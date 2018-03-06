@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 320366612417228698}
   - component: {fileID: 114514776772477528}
   m_Layer: 0
-  m_Name: time_test
+  m_Name: time_travel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
