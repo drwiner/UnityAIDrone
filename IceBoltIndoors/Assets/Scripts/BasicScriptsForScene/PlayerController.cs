@@ -28,10 +28,12 @@ public class PlayerController : MonoBehaviour
     private float moveVertical;
 
     private Rigidbody rb;
+    private Animator thisMecanim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        thisMecanim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -42,6 +44,9 @@ public class PlayerController : MonoBehaviour
         MovementUpDown();
         MovementForward();
         MovementRotation();
+        //Debug.Log(tiltAmountForward);
+        thisMecanim.SetFloat("angle", tiltAmountSideways);
+        thisMecanim.SetFloat("forward", tiltAmountForward);
         ClampingSpeedValues();
         Swerve();
 

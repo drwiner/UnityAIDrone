@@ -256,6 +256,9 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:/PeripheralPrograms/Unity2017_3/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
     <Reference Include="Oshmirto">
       <HintPath>Assets/Scripts/CinemachineTimelineCode/Cinematography/Oshmirto.dll</HintPath>
     </Reference>
@@ -279,9 +282,6 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/drwiner/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
-      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -371,7 +371,7 @@
     <None Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\xml_docs\anticipate_duel_fabula.xml" />
     <None Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\xml_docs\block_world.xml" />
     <None Include="Assets\Scripts\CinemachineTimelineCode\UtilityScripts\xml_docs\test_world.xml" />
-    <None Include="Assets\Scripts\unityai4games\PriorityQueue\readme.txt" />
+    <None Include="Assets\Scripts\CinemachineTimelineCode\unityai4games\PriorityQueue\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
