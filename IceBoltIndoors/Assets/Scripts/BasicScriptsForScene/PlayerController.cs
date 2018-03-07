@@ -38,10 +38,12 @@ public class PlayerController : MonoBehaviour
         thisMecanim = GetComponent<Animator>();
     }
 
-    public void SetInput(Vector3 force, float torque)
+    public void SetInput(float force, float torque)
     {
-        //moveHorizontal = torque;
+        moveHorizontal = torque;
+        moveVertical = force;
 
+        ControlDrone();
     }
 
 

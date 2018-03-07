@@ -411,7 +411,6 @@
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\4-Particles\ParticlePlayable.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\5-BulletTime\BulletTimeAsset.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\5-BulletTime\BulletTimePlayable.cs" />
-    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\6-ToggleComponent\Rotate.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\6-ToggleComponent\ToggleComponentAsset.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\6-ToggleComponent\ToggleComponentPlayable.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\7-DestroyGameObject\DestroyObjectAsset.cs" />
@@ -420,6 +419,9 @@
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\8-EventSystemDemo\EventSystemAsset.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\8-EventSystemDemo\EventSystemPlayable.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\9-TimelineControlsCanvas\TimelineControl.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\GoalSettingPlayable\DroneSteeringAsset.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\GoalSettingPlayable\DroneSteeringPlayable.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\GoalSettingPlayable\NewPlayableBehaviour.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\GoalSettingPlayable\SteeringAsset.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\GoalSettingPlayable\SteeringPlayable.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\TimeLine_Controls\LerpMoveObject\LerpMoveObjectAsset.cs" />
@@ -452,6 +454,7 @@
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\unityai4games\PriorityQueue\StablePriorityQueueNode.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\unityai4games\Steering\Behavior\DynoBehavior.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\unityai4games\Steering\Behavior\DynoBehavior_PathFollow.cs" />
+    <Compile Include="Assets\Scripts\CinemachineTimelineCode\unityai4games\Steering\Behavior\DynoBehavior_TimelineControl.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\unityai4games\Steering\Behavior\KinematicBehavior.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\unityai4games\Steering\Behavior\UnityDynoBehavior.cs" />
     <Compile Include="Assets\Scripts\CinemachineTimelineCode\unityai4games\Steering\DynamicSteering\DynoAlign.cs" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GoalNamespace;
 using GraphNamespace;
+using System;
 
 namespace SteeringNamespace
 {
@@ -23,8 +24,16 @@ namespace SteeringNamespace
 
         public float goalRadius = 0.5f;
         public float slowRadius = 2.5f;
+        public float angularSlowRadius = 60f;
+        public float arriveTime = 1f;
 
-        private bool atRest = true;
+        //private Vector3 direction;
+
+        public bool steering = false;
+        private float force, torque;
+
+        private Action seekTask;
+        private Action alignTask;
 
         void Start()
         {
@@ -33,68 +42,167 @@ namespace SteeringNamespace
             SP = GetComponent<SteeringParams>();
         }
 
+        public void PushGoal(Vector3 _newGoal)
+        {
+            currentGoal = _newGoal;
+        }
+
         public void SetPath(Stack<Vector3> _currentPath)
         {
             currentPath = _currentPath;
             currentGoal = currentPath.Pop();
         }
 
-        public float Seek(Vector3 target, bool arrive)
+        public void Steer(Vector3 origin, Vector3 target, bool departed, bool arrive)
         {
+            PushGoal(target);
             var direction = currentGoal - transform.position;
-            var distance = direction.magnitude;
+
+            //var force = Seek(arrive);
+            //var torque = Align();
+
+            seekTask = () => Seek(arrive);
+            alignTask = Align;
+
+            if (departed)
+            {
+                var currentVelocity = (transform.position + direction).normalized * SP.MAXSPEED;
+                RB.velocity = currentVelocity;
+                transform.LookAt(target);
+            }
+        }
+
+        public void Seek(bool arrive)
+        {
+            var distance = (currentGoal - transform.position).magnitude;
 
             if (distance < goalRadius)
             {
-                return 0f;
+                force = 0f;
+                return;
             }
 
             if (distance > slowRadius || !arrive)
             {
-                return 1f;
+                force = 1f;
+                return;
             }
 
             // distance is less than or equal to slow radius. 
-            return distance / slowRadius;
+            force = distance / slowRadius;
         }
 
-        public float Align(Vector3 target)
+        public void Align()
         {
-            return 0f;
-        }
 
-        void Update()
-        {
-            float seekOutput;
-            if (currentPath.Count == 0)
+            var direction = currentGoal - transform.position;
+            //var rotate = direction - transform.eulerAngles;
+            var rotation = mapToRange(Mathf.Atan2(direction.z, -direction.x));
+            var rotationSize = Mathf.Abs(rotation);
+            float targetRotation;
+            if (rotationSize < 0.05f)
             {
-                if (!atRest)
-                {
-                    seekOutput = Seek(currentTarget, true);
-                    if (seekOutput == 0f)
-                        atRest = true;
-                }
+                torque = 0f;
+                return;
+            }
+            if (rotationSize > angularSlowRadius)
+            {
+                targetRotation = SP.MAXROTATION;
             }
             else
             {
-                seekOutput = Seek(currentTarget, false);
-                if (seekOutput == 0f)
-                    currentTarget = currentPath.Pop();
+                targetRotation = SP.MAXROTATION * rotationSize / angularSlowRadius;
             }
-            
-            
 
-            //PC.SetInput(ds_force, ds_torque);
+            // Final target rotation combines speed (already in variable) with rotation direction
+            targetRotation = targetRotation * rotation / rotationSize;
 
-            //ds = new DynoSteering();
-            //ds.force = ds_force.force;
-            //ds.torque = ds_torque.torque;
+            var newTorque = targetRotation - mapToRange(Mathf.Atan2(RB.velocity.z, -RB.velocity.x));
+            newTorque = newTorque / arriveTime;
 
-            //kso = char_RigidBody.updateSteering(ds, Time.deltaTime);
-            //transform.position = new Vector3(kso.position.x, transform.position.y, kso.position.z);
-            //transform.rotation = Quaternion.Euler(0f, kso.orientation * Mathf.Rad2Deg, 0f);
+            var angularAcceleration = Mathf.Abs(newTorque);
 
+            if (angularAcceleration > SP.MAXANGULAR)
+            {
+                newTorque /= angularAcceleration;
+                torque = newTorque * SP.MAXANGULAR;
+                return;
+            }
+            torque = newTorque;
 
         }
+
+
+        public static float mapToRange(float radians)
+        {
+            float targetRadians = radians;
+            while (targetRadians <= -Mathf.PI)
+            {
+                targetRadians += Mathf.PI * 2;
+            }
+            while (targetRadians >= Mathf.PI)
+            {
+                targetRadians -= Mathf.PI * 2;
+            }
+            return targetRadians;
+        }
+
+
+        void Update()
+        {
+            if (steering)
+            {
+                seekTask();
+                alignTask();
+                PC.SetInput(force, torque);
+                //if (isDone())
+                steering = false;
+            }
+        }
+
+        public bool isDone()
+        {
+            if ((transform.position - currentGoal).magnitude < goalRadius)
+            {
+                return true;
+            }
+            return false;
+        }
+        //void Update()
+        //{
+        //    float seekOutput;
+        //    if (currentPath.Count == 0)
+        //    {
+        //        if (!atRest)
+        //        {
+        //            seekOutput = Seek(currentTarget, true);
+        //            if (seekOutput == 0f)
+        //                atRest = true;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        seekOutput = Seek(currentTarget, false);
+        //        if (seekOutput == 0f)
+        //            currentTarget = currentPath.Pop();
+        //            seekOutput = Seek(currentTarget, false);
+        //    }
+
+        //    if (!atRest) {
+        //        var currentVelocity = (direction * seekoutput).Normalize() * ;
+        //        PC.SetInput(seekOutput, 0f);
+        // }
+        //PC.SetInput(ds_force, ds_torque);
+
+        //ds = new DynoSteering();
+        //ds.force = ds_force.force;
+        //ds.torque = ds_torque.torque;
+
+        //kso = char_RigidBody.updateSteering(ds, Time.deltaTime);
+        //transform.position = new Vector3(kso.position.x, transform.position.y, kso.position.z);
+        //transform.rotation = Quaternion.Euler(0f, kso.orientation * Mathf.Rad2Deg, 0f);
+
+
+        // }
     }
 }

@@ -3665,7 +3665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &267584968
 Transform:
   m_ObjectHideFlags: 0
@@ -3689,7 +3689,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 267584967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b21690fd8f928459903dedb2b5ff34, type: 3}
+  m_Script: {fileID: 11500000, guid: e9b371f7993c9a748886b7837f9f2f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fab_clips_as_json: {fileID: 4900000, guid: 3da27b64ebf17ee4aad6c0b1a282afad, type: 3}
@@ -10825,6 +10825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upForce: 0
+  playerControlEnabled: 1
 --- !u!54 &745484776
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13563,7 +13564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 127.5, y: 36.26535}
+  m_AnchoredPosition: {x: 129.0607, y: 36.26535}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918790974
@@ -13595,7 +13596,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Discourse Text
@@ -24519,7 +24520,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Fabula Text
@@ -25713,7 +25714,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 28.7
   orthographic: 0
   orthographic size: 10
   m_Depth: 0
@@ -25737,13 +25738,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1476559854}
-  m_LocalRotation: {x: -0, y: 0.21176599, z: -0, w: 0.97732043}
-  m_LocalPosition: {x: -5.3, y: 2.75, z: -29.3}
+  m_LocalRotation: {x: -0, y: -0.1893905, z: -0, w: -0.98190194}
+  m_LocalPosition: {x: -6.06, y: 2.64, z: -29.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 24.452002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 381.834, z: 0}
 --- !u!1 &1477990471
 GameObject:
   m_ObjectHideFlags: 0
@@ -29762,8 +29763,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1783502324}
   - component: {fileID: 1783502325}
-  - component: {fileID: 1783502327}
-  - component: {fileID: 1783502326}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -29797,32 +29796,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.5, z: 0.8}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1783502326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1783502323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94a1ebff0f3d70748b4a0b12f242934c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1783502327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1783502323}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5b780fc61da4c94a9cdc4e226759c16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MAXSPEED: 5
-  MAXANGULAR: 5
-  MAXACCEL: 2
-  MAXROTATION: 2
 --- !u!1 &1790469528
 GameObject:
   m_ObjectHideFlags: 0
@@ -32297,7 +32270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1957513015
 Transform:
   m_ObjectHideFlags: 0
