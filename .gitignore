@@ -48,3 +48,6 @@ Corridor/Library/metadata/
 IceBoltIndoors/Library/metadata/
 IceBoltIndoors/Library/ShaderCache/
 IceBoltIndoors/Library/
+IceBoltIndoors/IceBoltIndoors.csproj
+IceBoltIndoors/IceBoltIndoors.Editor.csproj
+IceBoltIndoors/IceBoltINdoors.Plugins.csproj
