@@ -3826,6 +3826,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 267584968}
+  - component: {fileID: 267584970}
   - component: {fileID: 267584969}
   m_Layer: 0
   m_Name: IceBolt
@@ -3863,6 +3864,23 @@ MonoBehaviour:
   fab_clips_as_json: {fileID: 4900000, guid: 27c98b1890941014b8b07ae8e045d1ea, type: 3}
   disc_clips_as_json: {fileID: 4900000, guid: bdcfe115dc6853744b868b8cb37db58d, type: 3}
   useGraph: 0
+--- !u!114 &267584970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 267584967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489d3ca535e47114cb7d2ce41ba295fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReadInDiscourseOps: 0
+  ReadInStoryPlan: 0
+  ExtractVirtualWorldInformation: 0
+  PopulateTimelines: 1
+  PlayTimelines: 1
+  restartPipeline: 0
 --- !u!1 &270171644
 GameObject:
   m_ObjectHideFlags: 0
@@ -23241,7 +23259,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1476559854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.26, y: 2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
