@@ -4209,7 +4209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &267584968
 Transform:
   m_ObjectHideFlags: 0
@@ -4347,6 +4347,8 @@ MonoBehaviour:
   startPoint: {fileID: 1796746171}
   endPoint: {fileID: 0}
   laserMaterial: {fileID: 2100000, guid: a4f5c66fc05a7054aadb077eea1a49a3, type: 2}
+  PS: {fileID: 0}
+  firing: 0
 --- !u!120 &272824036
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -4977,12 +4979,12 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 291441387}
   serializedVersion: 5
-  lengthInSec: 5
+  lengthInSec: 0.5
   simulationSpeed: 1
   stopAction: 0
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -5030,14 +5032,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 206126559
+  randomSeed: 612187399
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 1.64
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5078,7 +5080,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 50
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -12249,7 +12251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &546320525
 Transform:
   m_ObjectHideFlags: 0
@@ -12289,8 +12291,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPoint: {fileID: 291441388}
-  endPoint: {fileID: 0}
+  endPoint: {fileID: 763523685}
   laserMaterial: {fileID: 2100000, guid: a4f5c66fc05a7054aadb077eea1a49a3, type: 2}
+  PS: {fileID: 291441390}
+  firing: 0
 --- !u!120 &546320527
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -16664,15 +16668,15 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 763523677}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9052639, y: 2.4706, z: -14.929}
+  m_LocalRotation: {x: -0, y: -0.99983305, z: -0, w: -0.018275635}
+  m_LocalPosition: {x: 10.33, y: 2.4706, z: -14.929}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 286915122}
   - {fileID: 1914909112}
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -182.094, z: 0}
 --- !u!1 &767392665
 GameObject:
   m_ObjectHideFlags: 0
@@ -24051,6 +24055,8 @@ MonoBehaviour:
   startPoint: {fileID: 1867767525}
   endPoint: {fileID: 0}
   laserMaterial: {fileID: 2100000, guid: a4f5c66fc05a7054aadb077eea1a49a3, type: 2}
+  PS: {fileID: 0}
+  firing: 0
 --- !u!120 &1200345425
 LineRenderer:
   m_ObjectHideFlags: 0
