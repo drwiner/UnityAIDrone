@@ -35,6 +35,10 @@ public class RunPlanner : MonoBehaviour {
         {
             Debug.Log(solution.ToStringOrdered());
         }
+        else
+        {
+            Debug.Log("No good");
+        }
     }
 
     public IPlan PreparePlanner()

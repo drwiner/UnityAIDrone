@@ -12,6 +12,8 @@ TagManager:
   - ActionHost
   - SteeringActor
   - TypeHierarchyHost
+  - Problem
+  - Planner
   layers:
   - Default
   - TransparentFX
