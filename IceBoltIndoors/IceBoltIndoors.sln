@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceBoltIndoors.Plugins", "I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceBoltIndoors.Editor", "IceBoltIndoors.Editor.csproj", "{CCB43DB7-6AAB-7F87-63AC-6C0866B2D3BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCompiler", "..\..\WorldCopmiler\WorldCompiler\WorldCompiler.csproj", "{72E7C688-565B-4EA0-AAF5-C6A55BBB8126}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{CCB43DB7-6AAB-7F87-63AC-6C0866B2D3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCB43DB7-6AAB-7F87-63AC-6C0866B2D3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCB43DB7-6AAB-7F87-63AC-6C0866B2D3BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72E7C688-565B-4EA0-AAF5-C6A55BBB8126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72E7C688-565B-4EA0-AAF5-C6A55BBB8126}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72E7C688-565B-4EA0-AAF5-C6A55BBB8126}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72E7C688-565B-4EA0-AAF5-C6A55BBB8126}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

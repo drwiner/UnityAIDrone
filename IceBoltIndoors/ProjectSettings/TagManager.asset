@@ -8,6 +8,10 @@ TagManager:
   - DiscourseTimeline
   - LocationHost
   - IceBolt
+  - ActorHost
+  - ActionHost
+  - SteeringActor
+  - TypeHierarchyHost
   layers:
   - Default
   - TransparentFX
