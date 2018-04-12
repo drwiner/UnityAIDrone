@@ -36,6 +36,11 @@ public class RunPlanner : MonoBehaviour {
         if (solution != null)
         {
             Debug.Log(solution.ToStringOrdered());
+            PlanSteps = new List<string>();
+            foreach (var step in solution.Orderings.TopoSort(solution.InitialStep))
+            {
+                PlanSteps.Add(step.ToString());
+            }
         }
         else
         {
@@ -46,7 +51,10 @@ public class RunPlanner : MonoBehaviour {
     public IPlan PreparePlanner()
     {
         Parser.path = "/";
+
         var domainOperatorComponent = GameObject.FindGameObjectWithTag("ActionHost").GetComponent<DomainOperators>();
+        domainOperatorComponent.Reset();
+
         var problem = CreateProblem(domainOperatorComponent.DomainOps);
         var domain = new Domain();
         var PF = new ProblemFreezer("Unity", "", domain, problem);
@@ -86,12 +94,8 @@ public class RunPlanner : MonoBehaviour {
     {
         var ProblemHost = GameObject.FindGameObjectWithTag("Problem");
         var problemComponent = ProblemHost.GetComponent<ProblemStates>();
-
-        // Create Problem
+        problemComponent.ReadProblem();
         var prob = new Problem("SteerProblem", "SteerProblem", "Unity", "", GetObjects(), problemComponent.initialPredicateList, problemComponent.goalPredicateList);
-
-        // Create and Store Ground Actions]
-        // GroundActionFactory.PopulateGroundActions(newOps, prob);
         return prob;
     }
 

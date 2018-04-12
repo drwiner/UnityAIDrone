@@ -8318,7 +8318,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getPlan: 0
-  PlanSteps: []
+  PlanSteps:
+  - (initial)-270
+  - (SteerAction PurpDrone L5 L3)-278
+  - (goal)-271
 --- !u!4 &595663700
 Transform:
   m_ObjectHideFlags: 0
