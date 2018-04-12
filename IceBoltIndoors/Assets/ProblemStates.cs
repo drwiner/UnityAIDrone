@@ -56,6 +56,18 @@ public class ProblemStates : MonoBehaviour {
                 Debug.Log(pred.ToString());
             }
         }
+
+        // Also collect location edges at Location host
+        var locationHost = GameObject.FindGameObjectWithTag("LocationHost");
+        var adjContainer = locationHost.GetComponent<AdjacentContainer>();
+        foreach (var edge in adjContainer.Edges)
+        {
+            var pred = ProcessStringItem(string.Format("adjacent {0} {1}", edge.source.name, edge.sink.name));
+            initialPredicateList.Add(pred as IPredicate);
+            var pred2 = ProcessStringItem(string.Format("adjacent {1} {0}", edge.source.name, edge.sink.name));
+            initialPredicateList.Add(pred2 as IPredicate);
+            Debug.Log(pred.ToString());
+        }
     }
 
     public Predicate ProcessStringItem(string stringItem)

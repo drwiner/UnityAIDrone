@@ -15,6 +15,8 @@ public class RunPlanner : MonoBehaviour {
 
     public List<string> PlanSteps;
 
+    public List<string> GroundSteps;
+
     public void Awake()
     {
         getPlan = false;
@@ -68,6 +70,11 @@ public class RunPlanner : MonoBehaviour {
         }
 
         GroundActionFactory.PopulateGroundActions(newOps, problem);
+        GroundSteps = new List<string>();
+        //foreach(var ga in GroundActionFactory.GroundActions)
+        //{
+        //    GroundSteps.Add(ga.ToString());
+        //}
         CacheMaps.Reset();
         CacheMaps.CacheLinks(GroundActionFactory.GroundActions);
         CacheMaps.CacheGoalLinks(GroundActionFactory.GroundActions, initPlan.Goal.Predicates);

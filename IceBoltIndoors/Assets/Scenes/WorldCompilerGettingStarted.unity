@@ -8319,9 +8319,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   getPlan: 0
   PlanSteps:
-  - (initial)-270
-  - (SteerAction PurpDrone L5 L3)-278
-  - (goal)-271
+  - (initial)-99
+  - (SteerAction PurpDrone L5 L3)-107
+  - (goal)-100
+  GroundSteps: []
 --- !u!4 &595663700
 Transform:
   m_ObjectHideFlags: 0
@@ -9829,6 +9830,9 @@ MonoBehaviour:
   MutablePreconditions:
   - predicateName: at
     terms: 0000000001000000
+    sign: 1
+  - predicateName: adjacent
+    terms: 0100000002000000
     sign: 1
   MutableEffects:
   - predicateName: at
