@@ -79,7 +79,7 @@ public class UnityActionOperator : MonoBehaviour
 
         // Instantiate Operator
         thisOp = new Operator(new Predicate(Name, terms, true), preconditions, effects);
-        Debug.Log(thisOp.Name);
+        Debug.Log(thisOp.Predicate);
 
         // Instantiate Nonequality constraints
         thisOp.NonEqualities = new List<List<ITerm>>();

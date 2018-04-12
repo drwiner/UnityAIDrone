@@ -13,6 +13,8 @@ public class RunPlanner : MonoBehaviour {
 
     public bool getPlan;
 
+    public List<string> PlanSteps;
+
     public void Awake()
     {
         getPlan = false;
@@ -58,6 +60,7 @@ public class RunPlanner : MonoBehaviour {
         }
 
         GroundActionFactory.PopulateGroundActions(newOps, problem);
+        CacheMaps.Reset();
         CacheMaps.CacheLinks(GroundActionFactory.GroundActions);
         CacheMaps.CacheGoalLinks(GroundActionFactory.GroundActions, initPlan.Goal.Predicates);
         GroundActionFactory.DetectStatics(CacheMaps.CausalMap, CacheMaps.ThreatMap);

@@ -8318,6 +8318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getPlan: 0
+  PlanSteps: []
 --- !u!4 &595663700
 Transform:
   m_ObjectHideFlags: 0
@@ -9489,7 +9490,7 @@ MonoBehaviour:
   - alive GreenDrone
   - alive PurpDrone
   GoalState:
-  - not alive PurpDrone
+  - at PurpDrone L3
   reset: 0
 --- !u!4 &662370609
 Transform:
